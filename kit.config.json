@@ -7,7 +7,7 @@
   },
   "analytics": {
     "provider": "umami",
-    "websiteId": "",
+    "websiteId": "4f74517d-2cfa-43b1-b204-b153e57a0f87",
     "scriptUrl": "https://cloud.umami.is/script.js",
     "_note": "Leave websiteId empty to disable. Paste the Umami website ID to enable cookieless page views and click events."
   },
