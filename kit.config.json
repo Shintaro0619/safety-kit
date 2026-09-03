@@ -1,0 +1,139 @@
+{
+  "_readme": "All links and card copy live here. Edit this file, commit, push. No code changes needed. See README.md.",
+  "site": {
+    "url": "https://shintaro0619.github.io/safety-kit/",
+    "instagram": "https://www.instagram.com/japandisasterchannel/",
+    "privacyUrl": "https://shintaro0619.github.io/jdg-web/privacy.html"
+  },
+  "analytics": {
+    "provider": "umami",
+    "websiteId": "",
+    "scriptUrl": "https://cloud.umami.is/script.js",
+    "_note": "Leave websiteId empty to disable. Paste the Umami website ID to enable cookieless page views and click events."
+  },
+  "appStore": {
+    "url": "https://apps.apple.com/app/japan-disaster-guide/id6787623258",
+    "campaign": {
+      "pt": "",
+      "ct": "safety_kit",
+      "mt": "8",
+      "_note": "pt = App Store Connect provider token (App Analytics > Campaigns). Leave empty to use the plain URL."
+    }
+  },
+  "hero": {
+    "eyebrow": "By Japan Disaster Guide",
+    "title": "Japan Travel Safety Kit",
+    "subtitle": "Everything you need for a safer trip to Japan.",
+    "intro": "Three things to sort out before you fly: a way to receive official warnings, a data connection so they reach you, and insurance for when plans change. Nothing here is a hotel or a tour.",
+    "cta": "Get the Japan Disaster Guide"
+  },
+  "cards": [
+    {
+      "id": "alerts",
+      "number": "01",
+      "kicker": "Emergency alerts",
+      "title": "Japan Disaster Guide",
+      "badge": "Free app",
+      "kind": "own",
+      "why": "When a warning goes out in Japan, it goes out in Japanese. The app carries Japan Meteorological Agency warnings in 7 languages, after JMA confirms them.",
+      "facts": [
+        "Earthquake, tsunami, typhoon and heavy-rain warnings, sent after JMA confirms them",
+        "115,000+ evacuation shelters on a map, searchable from where you are",
+        "Safety guides work offline",
+        "Free. One optional one-time unlock (¥300 / $1.99) for sharing your safety status with family"
+      ],
+      "options": [
+        {
+          "id": "appstore",
+          "enabled": true,
+          "name": "Japan Disaster Guide",
+          "cta": "Free on the App Store",
+          "url": "APP_STORE",
+          "note": "iPhone. Not available in every country yet."
+        }
+      ]
+    },
+    {
+      "id": "esim",
+      "number": "02",
+      "kicker": "Stay connected",
+      "title": "Get data before you land",
+      "badge": "Partner links",
+      "kind": "affiliate",
+      "why": "Warnings arrive as push notifications. They only reach you if your phone has data when they are sent. A travel eSIM installed before departure means you are connected from the moment you land.",
+      "facts": [
+        "Your phone must be eSIM-compatible and not locked to a carrier. Check the vendor's compatibility list first",
+        "Install while you still have a stable connection at home. Activation happens in Japan"
+      ],
+      "options": [
+        {
+          "id": "airalo",
+          "enabled": false,
+          "name": "Airalo",
+          "cta": "See Japan eSIM plans",
+          "url": "",
+          "facts": [
+            "Data-only eSIM for Japan (no phone number)",
+            "Runs on the SoftBank network, plus one other, per Airalo",
+            "Can be installed in advance from outside Japan"
+          ],
+          "_source": "https://www.airalo.com/japan-esim (read 2026-09-03). Prices are not shown on purpose; they change.",
+          "_program": "Impact.com. Apply at https://partners.airalo.com/solutions/affiliates"
+        },
+        {
+          "id": "saily",
+          "enabled": false,
+          "name": "Saily",
+          "cta": "See Japan eSIM plans",
+          "url": "",
+          "facts": [],
+          "_source": "https://saily.com/esim-japan/ returned 403 on 2026-09-03. Fill facts from the page by hand before enabling.",
+          "_program": "Direct. Apply at https://saily.com/affiliate/"
+        }
+      ]
+    },
+    {
+      "id": "insurance",
+      "number": "03",
+      "kicker": "Travel insurance",
+      "title": "Cover the trip that changes",
+      "badge": "Partner link",
+      "kind": "affiliate",
+      "why": "A typhoon can ground flights for a day. An earthquake can close a rail line. Short-term visitors are not enrolled in Japan's national health insurance, so hospital bills are paid in full. Insurance is the part of the kit that pays when plans change.",
+      "facts": [
+        "Read what is covered and the limits before you buy. Cover differs by plan and by your home country"
+      ],
+      "options": [
+        {
+          "id": "safetywing",
+          "enabled": false,
+          "name": "SafetyWing Nomad Insurance",
+          "cta": "See what it covers",
+          "url": "",
+          "facts": [
+            "Travel medical insurance: medical treatment and hospitalization, evacuation to a better-equipped hospital, lost checked luggage and travel delay, each with limits",
+            "Can be bought before you depart or after you have already left",
+            "Priced per 4 weeks. The price depends on age"
+          ],
+          "_source": "https://safetywing.com/nomad-insurance (read 2026-09-03). Confirm Japan is covered for the buyer's home country before enabling.",
+          "_program": "Direct. Apply at https://safetywing.com/ambassador"
+        }
+      ]
+    }
+  ],
+  "disclosure": {
+    "short": "Partner link. We may earn a commission at no extra cost to you.",
+    "full": "Some links on this page are affiliate links. We may earn a commission at no extra cost to you. Recommendations are selected independently. Product details are taken from each vendor's own page and may change; check the vendor's page before buying."
+  },
+  "support": {
+    "enabled": true,
+    "title": "Support",
+    "text": "This page and the app are run by one person. If it helped you, you can support it here.",
+    "cta": "Buy me a coffee",
+    "url": "https://buymeacoffee.com/japandisasterguide"
+  },
+  "footer": {
+    "line": "Japan Disaster Guide is an independent app. It is not affiliated with the Japan Meteorological Agency or any government body.",
+    "analyticsNote": "This page uses cookieless analytics (Umami) to count visits and link clicks. No personal data is stored."
+  }
+}
