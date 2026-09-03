@@ -30,7 +30,6 @@
   "cards": [
     {
       "id": "alerts",
-      "number": "01",
       "kicker": "Emergency alerts",
       "title": "Japan Disaster Guide",
       "badge": "Free app",
@@ -55,7 +54,6 @@
     },
     {
       "id": "esim",
-      "number": "02",
       "kicker": "Stay connected",
       "title": "Get data before you land",
       "badge": "Partner links",
@@ -94,7 +92,6 @@
     },
     {
       "id": "power",
-      "number": "03",
       "kicker": "Keep your phone alive",
       "title": "Power when the grid is down",
       "badge": "Partner link",
@@ -137,7 +134,6 @@
     },
     {
       "id": "insurance",
-      "number": "04",
       "kicker": "Travel insurance",
       "title": "Cover the trip that changes",
       "badge": "Partner link",

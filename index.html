@@ -238,15 +238,17 @@
 
     var mount = document.getElementById('cards');
     mount.textContent = '';
+    var shown = 0; // numbering follows the visible order, so hidden cards leave no gap
     (cfg.cards || []).forEach(function (card) {
       var options = (card.options || []).filter(function (o) { return o.enabled && o.url; });
       if (!options.length) return; // never show a dead button
+      shown += 1;
 
       var sec = el('section', 'card');
       sec.id = 'card-' + card.id;
       var head = el('div', 'card-head');
       var num = el('div', 'num');
-      num.appendChild(el('b', null, 'Essential ' + (card.number || '')));
+      num.appendChild(el('b', null, 'Essential ' + (shown < 10 ? '0' + shown : String(shown))));
       num.appendChild(document.createTextNode('  ' + (card.kicker || '')));
       head.appendChild(num);
       if (card.badge) head.appendChild(el('span', 'badge' + (card.kind === 'own' ? ' free' : ''), card.badge));
