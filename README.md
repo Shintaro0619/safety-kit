@@ -17,7 +17,7 @@ The spec is `~/disaster-app/marketing/SAFETY_KIT_BRIEF.md`. Decisions go to
 ## Change a link or add a vendor (no code)
 
 1. Open `kit.config.json`.
-2. Find the card (`cards[].id` = `alerts`, `esim`, `insurance`) and the vendor under `options[]`.
+2. Find the card (`cards[].id` = `alerts`, `esim`, `power`, `insurance`) and the vendor under `options[]`.
 3. Paste the affiliate URL into `url` and set `enabled` to `true`.
 4. Commit and push to `main`. GitHub Pages rebuilds in about a minute.
 
@@ -40,6 +40,7 @@ landing URL):
 |---|---|
 | `click_appstore` | Hero CTA and the app card button |
 | `click_esim` | Any eSIM vendor button (`vendor` = option id) |
+| `click_power` | Any power bank vendor button (`vendor` = option id) |
 | `click_insurance` | Any insurance vendor button (`vendor` = option id) |
 | `click_coffee` | Buy Me a Coffee button |
 | `click_other` | Footer links (`target` = link id) |
@@ -67,4 +68,4 @@ this page separately under App Analytics > Campaigns.
 - Vendor facts come from the vendor's own page. Record the URL and date in `_source`.
 - Do not show prices. They change and go stale.
 - Affiliate disclosure stays next to every partner button and at the bottom.
-- Only three cards: alerts, eSIM, insurance.
+- Four cards only: alerts, eSIM, power bank, insurance. Physical goods link to the buyer's home-country store (Amazon OneLink or a brand store with country sites); never assume shipping from Japan.

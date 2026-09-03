@@ -93,8 +93,51 @@
       ]
     },
     {
-      "id": "insurance",
+      "id": "power",
       "number": "03",
+      "kicker": "Keep your phone alive",
+      "title": "Power when the grid is down",
+      "badge": "Partner link",
+      "kind": "affiliate",
+      "why": "Alerts, maps and shelter search all run on your phone, and your phone is also your flashlight. In a blackout there is nowhere to charge it. A charged power bank is the difference between a working phone and a dead one.",
+      "facts": [
+        "Power banks go in carry-on baggage only, never in checked luggage (IATA)",
+        "Up to 100 Wh is generally allowed. 100 to 160 Wh needs airline approval. Over 160 Wh is not permitted (IATA)",
+        "From 27 March 2026: no more than two power banks per person, and a power bank must not be recharged while on board (ICAO addendum, via IATA). Airlines apply this at different speeds, so check yours",
+        "On Japanese airlines since 8 July 2025: do not put a power bank in the overhead bin, and charge only where you can see it (Japan MLIT)",
+        "Buy it at home before you fly. Prices and models differ by country, so the link below opens the store for your region where available"
+      ],
+      "options": [
+        {
+          "id": "amazon",
+          "enabled": false,
+          "name": "Power bank (Amazon)",
+          "cta": "See power banks",
+          "url": "",
+          "facts": [],
+          "_source": "Program: Amazon Associates (US). OneLink redirects buyers in CA/UK/DE/FR/IT/ES to their local store and credits the US account. JP/SG/AU need their own Associates accounts linked via OneLink. Source: affiliate-program.amazon.com help G84KVZ7BTNXHF4UH, read 2026-09-03.",
+          "_program": "Apply at https://affiliate-program.amazon.com/ after the Kit has traffic. Amazon closes accounts with no qualifying sales in the first 180 days."
+        },
+        {
+          "id": "anker",
+          "enabled": false,
+          "name": "Anker",
+          "cta": "See Anker power banks",
+          "url": "",
+          "facts": [],
+          "_source": "Brand store with country sites. Affiliate via Impact per region (US/UK/DE/AU listed on anker.com/become-an-affiliate, read 2026-09-03). Japan program unverified.",
+          "_program": "https://www.anker.com/become-an-affiliate"
+        }
+      ],
+      "_sources": [
+        "IATA, Changes Regarding Power Banks, guidance for operators, 31 Mar 2026 (PDF): carry-on only; must not be recharged on board (new); should not be used to recharge a device on board (new recommendation); max two per person (new); 100-160 Wh with operator approval, not carried into DGR 68th ed.",
+        "IATA travelers page (iata.org/en/youandiata/travelers/batteries): never in checked baggage; up to 100 Wh generally allowed; 100-160 Wh with airline approval; over 160 Wh usually not permitted",
+        "Japan MLIT press release 2025-07-01 (kouku10_hh_000284): from 2025-07-08 on Japanese scheduled carriers, no storage in overhead bins; charging only where the state can be checked; foreign carriers follow their own rules"
+      ]
+    },
+    {
+      "id": "insurance",
+      "number": "04",
       "kicker": "Travel insurance",
       "title": "Cover the trip that changes",
       "badge": "Partner link",
