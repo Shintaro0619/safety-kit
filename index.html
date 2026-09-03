@@ -275,9 +275,11 @@
       mount.appendChild(sec);
     });
 
+    // Disclosure is shown only when at least one partner link is on the page.
     var d = cfg.disclosure || {};
+    var hasAffiliate = !!mount.querySelector('a[rel~="sponsored"]');
     document.getElementById('disclosure-text').textContent = d.full || '';
-    if (!d.full) document.getElementById('disclosure').classList.add('hidden');
+    document.getElementById('disclosure').classList.toggle('hidden', !(d.full && hasAffiliate));
 
     var s = cfg.support || {};
     if (s.enabled && s.url) {
