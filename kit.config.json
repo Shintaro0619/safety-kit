@@ -84,11 +84,47 @@
           "name": "Saily",
           "cta": "See Japan eSIM plans",
           "url": "",
-          "facts": [],
-          "_source": "https://saily.com/esim-japan/ returned 403 on 2026-09-03. Fill facts from the page by hand before enabling.",
-          "_program": "Direct. Apply at https://saily.com/affiliate/"
+          "facts": [
+            "Data-only travel eSIM; plans by data amount or unlimited for a set number of days",
+            "Uses local operators including KDDI and SoftBank, per Saily",
+            "Set up at home in the Saily app; the plan activates automatically when you land in Japan",
+            "One eSIM can hold plans for other destinations, so it works for multi-country trips"
+          ],
+          "_source": "https://saily.com/esim-japan/ (read 2026-09-04 via browser). Prices not shown on purpose.",
+          "_program": "Direct. Applied 2026-09-04 12:00 at https://affiliates.saily.com (under review)."
+        },
+        {
+          "id": "mobal",
+          "enabled": false,
+          "name": "Mobal",
+          "cta": "See Japan eSIM plans",
+          "url": "",
+          "facts": [
+            "Japan-based provider with English-language support",
+            "Tourist eSIMs come as data-only or with a real Japanese phone number (voice plans run on the Docomo network)",
+            "Data-only tourist eSIMs are delivered by email, no ID required, per Mobal",
+            "Prices include Japanese tax; no contract"
+          ],
+          "_source": "https://www.mobal.com/japan-esims/ (read 2026-09-04). Tourist plan durations and data amounts are not stated on the page; do not add them without a source.",
+          "_program": "Direct (partners.mobal.com). Applied 2026-09-04 15:00, referral ID japandisasterguide, approval by email. Data eSIM up to 10%, cookie 60 days, JPY payout, min JPY10,000."
+        },
+        {
+          "id": "sakura",
+          "enabled": false,
+          "name": "Sakura Mobile",
+          "cta": "See Japan eSIM plans",
+          "url": "",
+          "facts": [
+            "Japan-based provider; unlimited-data prepaid eSIM for stays of up to 90 days",
+            "Delivered by email as a QR code; can be installed before departure, and the usage period starts when you arrive in Japan (5G eSIM)",
+            "Hotspot / tethering supported, per Sakura Mobile",
+            "If the eSIM turns out to be incompatible with your phone, Sakura Mobile upgrades you to a Pocket WiFi at no extra cost, per their page"
+          ],
+          "_source": "https://www.sakuramobile.jp/travel/esim/ (read 2026-09-04). Prices not shown on purpose.",
+          "_program": "Direct (p.sakuramobile.jp). Applied 2026-09-04 15:04, username japandisasterguide, pending approval (about a week). Travel SIM/WiFi 10%, cookie 30 days."
         }
-      ]
+      ],
+      "_display_rule": "Show at most 2 vendors: one global brand (Airalo or Saily) + one Japan specialist (Mobal or Sakura Mobile). Others stay enabled:false as backups."
     },
     {
       "id": "power",
