@@ -95,18 +95,19 @@
         },
         {
           "id": "mobal",
-          "enabled": false,
-          "name": "Mobal",
-          "cta": "See Japan eSIM plans",
-          "url": "",
+          "enabled": true,
+          "name": "Mobal Japan Tourist eSIM",
+          "cta": "See the Japan tourist eSIM",
+          "url": "https://www.mobal.com/esim-japan-travel/?a_aid=japandisasterguide&a_bid=552f4ac9",
           "facts": [
             "Japan-based provider with English-language support",
-            "Tourist eSIMs come as data-only or with a real Japanese phone number (voice plans run on the Docomo network)",
-            "Data-only tourist eSIMs are delivered by email, no ID required, per Mobal",
-            "Prices include Japanese tax; no contract"
+            "Data-only eSIM (no voice or SMS) on the KDDI network",
+            "Unlimited data on 5G for a fixed period of 1 to 31 days; personal hotspot up to 2GB per plan",
+            "Can be installed before you travel; activation instructions arrive by email"
           ],
-          "_source": "https://www.mobal.com/japan-esims/ (read 2026-09-04). Tourist plan durations and data amounts are not stated on the page; do not add them without a source.",
-          "_program": "Direct (partners.mobal.com). Applied 2026-09-04 15:00, referral ID japandisasterguide, approval by email. Data eSIM up to 10%, cookie 60 days, JPY payout, min JPY10,000."
+          "_source": "https://www.mobal.com/esim-japan-travel/ (read 2026-09-04 18:32). Prices not shown on purpose. Voice products (JPY2,250 per sale) exist but are for long stays and are not shown.",
+          "_program": "Direct (partners.mobal.com). Approved 2026-09-04 18:26. Campaign \"Mobal Data-only eSIM\" 10% per sale, cookie 60 days, JPY payout, min JPY10,000. Affiliate ID japandisasterguide.",
+          "_alt_data_esims_url": "https://www.mobal.com/japan-esims/?t=st&a_aid=japandisasterguide&a_bid=ff8152c1"
         },
         {
           "id": "sakura",
