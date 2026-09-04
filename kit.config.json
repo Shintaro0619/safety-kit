@@ -65,6 +65,22 @@
       ],
       "options": [
         {
+          "id": "saily",
+          "enabled": true,
+          "name": "Saily",
+          "cta": "See Saily eSIM plans",
+          "url": "https://go.saily.site/aff_c?offer_id=101&aff_id=16552",
+          "facts": [
+            "Data-only travel eSIM; plans by data amount or unlimited for a set number of days",
+            "Uses local operators including KDDI and SoftBank, per Saily",
+            "Set up at home in the Saily app; the plan activates automatically when you land in Japan",
+            "One eSIM can hold plans for other destinations, so it works for multi-country trips"
+          ],
+          "_source": "https://saily.com/esim-japan/ (read 2026-09-04 via browser). Prices not shown on purpose.",
+          "_program": "Direct (TUNE, affiliates.saily.com). Approved 2026-09-04 20:20, aff_id 16552, offer 101, 15% per new user per their page. Saily offered a 10% audience coupon; code requested by email.",
+          "_deeplink_candidate": "https://go.saily.site/aff_c?offer_id=101&aff_id=16552&url=https%3A%2F%2Fsaily.com%2Fesim-japan%2F (lands on the Japan page but the landing URL loses the aff params; use only after Saily confirms attribution is kept)"
+        },
+        {
           "id": "airalo",
           "enabled": false,
           "name": "Airalo",
@@ -77,21 +93,6 @@
           ],
           "_source": "https://www.airalo.com/japan-esim (read 2026-09-03). Prices are not shown on purpose; they change.",
           "_program": "Impact.com. Apply at https://partners.airalo.com/solutions/affiliates"
-        },
-        {
-          "id": "saily",
-          "enabled": false,
-          "name": "Saily",
-          "cta": "See Japan eSIM plans",
-          "url": "",
-          "facts": [
-            "Data-only travel eSIM; plans by data amount or unlimited for a set number of days",
-            "Uses local operators including KDDI and SoftBank, per Saily",
-            "Set up at home in the Saily app; the plan activates automatically when you land in Japan",
-            "One eSIM can hold plans for other destinations, so it works for multi-country trips"
-          ],
-          "_source": "https://saily.com/esim-japan/ (read 2026-09-04 via browser). Prices not shown on purpose.",
-          "_program": "Direct. Applied 2026-09-04 12:00 at https://affiliates.saily.com (under review)."
         },
         {
           "id": "mobal",
