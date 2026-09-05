@@ -27,6 +27,16 @@ no enabled vendor is hidden entirely, so the page never shows a dead button.
 Fields marked `_source` and `_program` are notes for us. The page ignores any
 key that starts with `_`.
 
+## In-app browsers
+
+Instagram, Facebook, LINE and TikTok open links in an in-app browser without
+tabs. There a `target="_blank"` link opens in a fresh context and the back
+button cannot return to the Kit. The page detects those user agents (or
+`?inapp=1` for testing) and navigates in the same view after a 150 ms delay so
+the click event is sent first. Vendor pages that rewrite their own URL on load
+(SafetyWing adds `selectedPlan=...`) trap the back button; give them the final
+URL directly.
+
 ## Analytics
 
 `analytics.websiteId` empty = no tracking script is loaded.
