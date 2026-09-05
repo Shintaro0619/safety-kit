@@ -186,7 +186,7 @@
           "enabled": true,
           "name": "SafetyWing Nomad Insurance (Essential)",
           "cta": "See what it covers",
-          "url": "https://safetywing.com/nomad-insurance?referenceID=26593005&campaign=japan-travel-safety-kit&utm_campaign=japan-travel-safety-kit&utm_source=26593005&utm_medium=Ambassador",
+          "url": "https://safetywing.com/nomad-insurance?referenceID=26593005&campaign=japan-travel-safety-kit&utm_campaign=japan-travel-safety-kit&utm_source=26593005&utm_medium=Ambassador&selectedPlan=NOMAD_INSURANCE_ESSENTIAL",
           "facts": [
             "Travel medical insurance: medical treatment and hospitalization, evacuation to a better-equipped hospital, lost checked luggage and travel delay, each with limits",
             "Can be bought before you depart or after you have already left",
@@ -194,7 +194,8 @@
           ],
           "_source": "https://safetywing.com/nomad-insurance (read 2026-09-03). Japan not on any exclusion list (help center article 10264534 and plan page, checked 2026-09-04). Ambassador ID 26593005, campaign japan-travel-safety-kit, enabled 2026-09-04 00:30 JST.",
           "_program": "Direct. Apply at https://safetywing.com/ambassador",
-          "_alt_complete_url": "https://explore.safetywing.com/nomad-insurance-complete?selectedPlan=NOMAD_INSURANCE_COMPLETE&referenceID=26593005&campaign=japan-travel-safety-kit&utm_campaign=japan-travel-safety-kit&utm_source=26593005&utm_medium=Ambassador"
+          "_alt_complete_url": "https://explore.safetywing.com/nomad-insurance-complete?selectedPlan=NOMAD_INSURANCE_COMPLETE&referenceID=26593005&campaign=japan-travel-safety-kit&utm_campaign=japan-travel-safety-kit&utm_source=26593005&utm_medium=Ambassador",
+          "_note_back_button": "selectedPlan is included on purpose: without it SafetyWing rewrites the URL with pushState on load, which traps the back button in in-app browsers (reproduced 2026-09-05)."
         }
       ]
     }

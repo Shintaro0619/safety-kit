@@ -181,10 +181,23 @@
     window.__kitEvents = window.__kitEvents || [];
     window.__kitEvents.push({ name: name, data: payload });
   }
+  // In-app browsers (Instagram, Facebook, LINE, TikTok) have no tabs: a target="_blank"
+  // link opens in a fresh context and the back button cannot return to this page.
+  // There we navigate in the same view instead, after giving the tracker a moment.
+  var inApp = /Instagram|FBAN|FBAV|FB_IAB|Line\/|BytedanceWebview|TikTok/i.test(navigator.userAgent)
+    || params.get('inapp') === '1';
+  if (inApp) {
+    Array.prototype.forEach.call(document.querySelectorAll('a[target="_blank"]'), function (a) { a.removeAttribute('target'); });
+  }
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest && ev.target.closest('a[data-event]');
     if (!a) return;
     track(a.getAttribute('data-event'), { vendor: a.getAttribute('data-vendor') || '' });
+    if (inApp && a.href && a.getAttribute('href') !== '#') {
+      ev.preventDefault();
+      var href = a.href;
+      setTimeout(function () { window.location.assign(href); }, 150);
+    }
   });
 
   function loadAnalytics(cfg) {
@@ -264,7 +277,7 @@
         if (o.facts && o.facts.length) box.appendChild(factsList(o.facts));
         var a = el('a', 'btn' + (card.kind === 'own' ? '' : ' secondary'), o.cta || o.name || 'Open');
         a.href = resolveUrl(o.url, cfg);
-        a.target = '_blank';
+        if (!inApp) a.target = '_blank';
         a.rel = card.kind === 'affiliate' ? 'sponsored noopener' : 'noopener';
         a.setAttribute('data-event', eventFor(card.id));
         a.setAttribute('data-vendor', o.id || String(i));
