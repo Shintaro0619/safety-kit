@@ -64,7 +64,20 @@
   h1 { font-size: 34px; line-height: 1.15; margin: 14px 0 8px; letter-spacing: -.01em; }
   h1 span { color: var(--accent-2); }
   .sub { font-size: 18px; color: var(--text); margin: 0 0 10px; }
-  .intro { color: var(--muted); margin: 0 0 22px; }
+  .intro { color: var(--muted); margin: 0 0 18px; }
+  .kit-index { margin: 0 0 6px; }
+  .kit-index .label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+  .kit-index ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .kit-index a {
+    display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+    background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px;
+    color: var(--text); text-decoration: none; font-weight: 600; font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .kit-index a b { color: var(--accent-2); font-size: 12px; letter-spacing: .08em; }
+  .kit-index a small { margin-left: auto; color: var(--muted); font-weight: 500; font-size: 12px; white-space: nowrap; }
+  .kit-index a:active { background: var(--bg-3); }
+  #hero-cta-wrap { margin-top: 16px; }
 
   .btn {
     display: flex; align-items: center; justify-content: center; gap: 10px;
@@ -121,11 +134,17 @@
     <h1>Japan Travel <span>Safety Kit</span></h1>
     <p class="sub" id="subtitle">Everything you need for a safer trip to Japan.</p>
     <p class="intro" id="intro"></p>
-    <a class="btn" id="hero-cta" href="https://apps.apple.com/app/japan-disaster-guide/id6787623258" data-event="click_appstore" data-vendor="hero" rel="noopener" target="_blank">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v14"/><path d="m6 10 6 6 6-6"/><path d="M4 20h16"/></svg>
-      <span id="hero-cta-text">Get the Japan Disaster Guide</span>
-    </a>
-    <p class="note" style="text-align:center">Free on the App Store</p>
+    <nav class="kit-index hidden" id="kit-index" aria-label="What is in the kit">
+      <p class="label" id="kit-index-label">What's in the kit</p>
+      <ol id="kit-index-list"></ol>
+    </nav>
+    <div id="hero-cta-wrap">
+      <a class="btn" id="hero-cta" href="https://apps.apple.com/app/japan-disaster-guide/id6787623258" data-event="click_appstore" data-vendor="hero" rel="noopener" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v14"/><path d="m6 10 6 6 6-6"/><path d="M4 20h16"/></svg>
+        <span id="hero-cta-text">Get the Japan Disaster Guide</span>
+      </a>
+      <p class="note" style="text-align:center">Free on the App Store</p>
+    </div>
   </header>
 
   <noscript><p>This page needs JavaScript to show the links. The app is on the App Store at apps.apple.com/app/id6787623258.</p></noscript>
@@ -193,7 +212,8 @@
     var a = ev.target.closest && ev.target.closest('a[data-event]');
     if (!a) return;
     track(a.getAttribute('data-event'), { vendor: a.getAttribute('data-vendor') || '' });
-    if (inApp && a.href && a.getAttribute('href') !== '#') {
+    var rawHref = a.getAttribute('href') || '';
+    if (inApp && a.href && rawHref !== '#' && rawHref.charAt(0) !== '#') {
       ev.preventDefault();
       var href = a.href;
       setTimeout(function () { window.location.assign(href); }, 150);
@@ -249,6 +269,9 @@
     document.getElementById('intro').textContent = hero.intro || '';
     if (hero.cta) document.getElementById('hero-cta-text').textContent = hero.cta;
     document.getElementById('hero-cta').href = appStoreUrl(cfg);
+    // The big App Store button duplicates bio link 1 and made visitors leave before
+    // seeing the other cards (measured 2026-09-07). Off by default; config can restore it.
+    document.getElementById('hero-cta-wrap').classList.toggle('hidden', hero.showAppButton === false);
 
     var mount = document.getElementById('cards');
     mount.textContent = '';
@@ -290,6 +313,28 @@
       });
       mount.appendChild(sec);
     });
+
+    // Index under the hero: one row per visible card, so eSIM and insurance are seen
+    // before anyone taps the App Store. Anchor links only; tracked as click_index.
+    var idx = document.getElementById('kit-index');
+    var idxList = document.getElementById('kit-index-list');
+    idxList.textContent = '';
+    if (hero.indexLabel) document.getElementById('kit-index-label').textContent = hero.indexLabel;
+    var visible = Array.prototype.slice.call(mount.querySelectorAll('.card'));
+    visible.forEach(function (sec, i) {
+      var card = (cfg.cards || []).filter(function (c) { return 'card-' + c.id === sec.id; })[0] || {};
+      var li = el('li');
+      var a = el('a');
+      a.href = '#' + sec.id;
+      a.setAttribute('data-event', 'click_index');
+      a.setAttribute('data-vendor', card.id || String(i));
+      a.appendChild(el('b', null, (i + 1 < 10 ? '0' : '') + (i + 1)));
+      a.appendChild(document.createTextNode(card.indexTitle || card.kicker || card.title || ''));
+      if (card.badge) a.appendChild(el('small', null, card.badge));
+      li.appendChild(a);
+      idxList.appendChild(li);
+    });
+    idx.classList.toggle('hidden', visible.length < 2 || hero.showIndex === false);
 
     // Disclosure is shown only when at least one partner link is on the page.
     var d = cfg.disclosure || {};

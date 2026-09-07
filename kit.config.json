@@ -25,7 +25,11 @@
     "title": "Japan Travel Safety Kit",
     "subtitle": "Everything you need for a safer trip to Japan.",
     "intro": "Three things to sort out before you fly: a way to receive official warnings, a data connection so they reach you, and insurance for when plans change. Nothing here is a hotel or a tour.",
-    "cta": "Get the Japan Disaster Guide"
+    "cta": "Get the Japan Disaster Guide",
+    "showAppButton": false,
+    "showIndex": true,
+    "indexLabel": "What's in the kit",
+    "_note": "showAppButton=false since 2026-09-07: the hero App Store button duplicated bio link 1 and 41% of visitors left through it before seeing the other cards. The app button stays inside card 01. Set true to restore."
   },
   "cards": [
     {
@@ -50,7 +54,8 @@
           "url": "APP_STORE",
           "note": "iPhone. Not available in every country yet."
         }
-      ]
+      ],
+      "indexTitle": "Alerts app"
     },
     {
       "id": "esim",
@@ -126,7 +131,8 @@
           "_program": "Direct (p.sakuramobile.jp, iDevAffiliate). Approved 2026-09-07 09:02; link received 09:04 by email (resolves to sakuramobile.jp/?idev_id=625&link=10). Use ONLY this emailed link, not the dashboard links (their instruction). Travel SIM/WiFi 10%, cookie 30 days, PayPal. Kept as the Japan-slot backup while Mobal is shown; swap in if Mobal has no conversions."
         }
       ],
-      "_display_rule": "Show at most 2 vendors: one global brand (Airalo or Saily) + one Japan specialist (Mobal or Sakura Mobile). Others stay enabled:false as backups."
+      "_display_rule": "Show at most 2 vendors: one global brand (Airalo or Saily) + one Japan specialist (Mobal or Sakura Mobile). Others stay enabled:false as backups.",
+      "indexTitle": "Travel eSIM"
     },
     {
       "id": "power",
@@ -168,7 +174,8 @@
         "IATA, Changes Regarding Power Banks, guidance for operators, 31 Mar 2026 (PDF): carry-on only; must not be recharged on board (new); should not be used to recharge a device on board (new recommendation); max two per person (new); 100-160 Wh with operator approval, not carried into DGR 68th ed.",
         "IATA travelers page (iata.org/en/youandiata/travelers/batteries): never in checked baggage; up to 100 Wh generally allowed; 100-160 Wh with airline approval; over 160 Wh usually not permitted",
         "Japan MLIT press release 2025-07-01 (kouku10_hh_000284): from 2025-07-08 on Japanese scheduled carriers, no storage in overhead bins; charging only where the state can be checked; foreign carriers follow their own rules"
-      ]
+      ],
+      "indexTitle": "Power bank"
     },
     {
       "id": "insurance",
@@ -197,7 +204,8 @@
           "_alt_complete_url": "https://explore.safetywing.com/nomad-insurance-complete?selectedPlan=NOMAD_INSURANCE_COMPLETE&referenceID=26593005&campaign=japan-travel-safety-kit&utm_campaign=japan-travel-safety-kit&utm_source=26593005&utm_medium=Ambassador",
           "_note_back_button": "selectedPlan is included on purpose: without it SafetyWing rewrites the URL with pushState on load, which traps the back button in in-app browsers (reproduced 2026-09-05)."
         }
-      ]
+      ],
+      "indexTitle": "Travel insurance"
     }
   ],
   "disclosure": {

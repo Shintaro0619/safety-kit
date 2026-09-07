@@ -48,7 +48,8 @@ landing URL):
 
 | Event | Fired by |
 |---|---|
-| `click_appstore` | Hero CTA and the app card button |
+| `click_appstore` | App card button (and the hero CTA when `hero.showAppButton` is true) |
+| `click_index` | The "What's in the kit" index under the hero (`vendor` = card id) |
 | `click_esim` | Any eSIM vendor button (`vendor` = option id) |
 | `click_power` | Any power bank vendor button (`vendor` = option id) |
 | `click_insurance` | Any insurance vendor button (`vendor` = option id) |
