@@ -183,9 +183,10 @@
       "title": "Cover the trip that changes",
       "badge": "Partner link",
       "kind": "affiliate",
-      "why": "A typhoon can ground flights for a day. An earthquake can close a rail line. Short-term visitors are not enrolled in Japan's national health insurance, so hospital bills are paid in full. Insurance is the part of the kit that pays when plans change.",
+      "why": "A typhoon can ground flights for a day. An earthquake can close a rail line. Medical care in Japan is advanced, and treatment can be expensive for visitors. Insurance is the part of the kit that pays when plans change.",
       "facts": [
-        "Read what is covered and the limits before you buy. Cover differs by plan and by your home country"
+        "Read what is covered and the limits before you buy. Cover differs by plan and by your home country",
+        "Japan's tourism organization recommends travel insurance for all visitors, and notes it can be bought after arrival (JNTO)"
       ],
       "options": [
         {
@@ -205,7 +206,8 @@
           "_note_back_button": "selectedPlan is included on purpose: without it SafetyWing rewrites the URL with pushState on load, which traps the back button in in-app browsers (reproduced 2026-09-05)."
         }
       ],
-      "indexTitle": "Travel insurance"
+      "indexTitle": "Travel insurance",
+      "_source": "https://www.japan.travel/en/plan/travel-insurance-in-japan/ (read 2026-09-09): 'treatment can be expensive', 'strongly recommended that all travelers to Japan get travel insurance', 'possible to purchase insurance after you have arrived'. The earlier line about national health insurance was removed on 2026-09-09: no primary source on hand."
     }
   ],
   "disclosure": {
