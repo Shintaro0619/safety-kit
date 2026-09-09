@@ -1,0 +1,29 @@
+# Japan Travel Safety Kit - everything on this site may be crawled and cited.
+User-agent: *
+Allow: /
+
+# AI search and assistant crawlers, allowed explicitly.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://shintaro0619.github.io/safety-kit/sitemap.xml

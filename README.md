@@ -19,7 +19,8 @@ The spec is `~/disaster-app/marketing/SAFETY_KIT_BRIEF.md`. Decisions go to
 1. Open `kit.config.json`.
 2. Find the card (`cards[].id` = `alerts`, `esim`, `power`, `insurance`) and the vendor under `options[]`.
 3. Paste the affiliate URL into `url` and set `enabled` to `true`.
-4. Commit and push to `main`. GitHub Pages rebuilds in about a minute.
+4. Run `python3 build.py` (pre-renders the cards and JSON-LD into index.html for crawlers and AI search; the browser still renders from the JSON).
+5. Commit and push to `main`. GitHub Pages rebuilds in about a minute.
 
 A vendor with `enabled: false` or an empty `url` is not rendered. A card with
 no enabled vendor is hidden entirely, so the page never shows a dead button.
