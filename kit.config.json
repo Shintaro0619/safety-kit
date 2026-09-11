@@ -208,6 +208,33 @@
       ],
       "indexTitle": "Travel insurance",
       "_source": "https://www.japan.travel/en/plan/travel-insurance-in-japan/ (read 2026-09-09): 'treatment can be expensive', 'strongly recommended that all travelers to Japan get travel insurance', 'possible to purchase insurance after you have arrived'. The earlier line about national health insurance was removed on 2026-09-09: no primary source on hand."
+    },
+    {
+      "id": "manual",
+      "kicker": "Know what to do",
+      "title": "Japan Travel Safety Manual",
+      "indexTitle": "Safety manual (PDF)",
+      "badge": "$9.99 PDF",
+      "kind": "own",
+      "why": "The warnings, explained for visitors, and what to do in the first 72 hours. 66 pages made to read on a phone, plus printable pointing cards. Every number is quoted from an official Japanese source.",
+      "facts": [
+        "Alert Levels, shindo, tsunami warnings, typhoon classes, heat alerts",
+        "What to do in a hotel room, a train, a station, a shelter",
+        "The fire service's own five-step script for calling 119",
+        "21 pointing cards in English, Japanese and romaji",
+        "Works offline once saved to your phone"
+      ],
+      "options": [
+        {
+          "id": "gumroad",
+          "enabled": true,
+          "name": "Japan Travel Safety Manual",
+          "cta": "Get the manual ($9.99)",
+          "url": "https://soyama6.gumroad.com/l/japan-travel-safety-manual",
+          "note": "Sold by Japan Disaster Guide via Gumroad. 30-day money back guarantee."
+        }
+      ],
+      "_note": "Own product, published 2026-09-11. Not an affiliate link."
     }
   ],
   "disclosure": {

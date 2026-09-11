@@ -280,7 +280,8 @@ TEMPLATE = """<!doctype html>
 <p>Japan Disaster Guide is a free iPhone app that delivers JMA warnings for the places you save, after JMA confirms them, in 7 languages, with 115,000+ evacuation sites on a map.</p>
 <a class="btn" href="{app}" data-event="click_appstore" data-vendor="guide-{slug}" rel="noopener">Free on the App Store</a>
 <a class="btn secondary" href="{site}" data-event="click_index" data-vendor="guide-{slug}">See the Japan Travel Safety Kit</a>
-<p style="margin-top:10px">The full procedures, the 119 script, shelter life, the 171 steps, 20 pointing cards and the worksheets are in the <b>Japan Travel Safety Manual</b> (PDF, coming September 2026).</p>
+<p style="margin-top:10px">The full procedures, the 119 script, shelter life, the 171 steps, 21 pointing cards and the worksheets are in the <b>Japan Travel Safety Manual</b>, a 66-page PDF made to read on a phone.</p>
+<a class="btn secondary" href="https://soyama6.gumroad.com/l/japan-travel-safety-manual" data-event="click_manual" data-vendor="guide-{slug}" rel="noopener">Get the manual ($9.99 PDF)</a>
 </div>
 <div class="sources"><b>Sources</b> (read {today}; quotations are verbatim)<ol>{sources}</ol>
 <p>Japan Disaster Guide is an independent app. It is not affiliated with the Japan Meteorological Agency or any government body. In an emergency, follow the instructions of local officials.</p></div>

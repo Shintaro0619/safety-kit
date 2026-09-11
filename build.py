@@ -15,7 +15,7 @@ ROOT = Path(__file__).parent
 CFG = json.loads((ROOT / "kit.config.json").read_text(encoding="utf-8"))
 INDEX = ROOT / "index.html"
 
-EVENT = {"alerts": "click_appstore", "esim": "click_esim", "power": "click_power", "insurance": "click_insurance"}
+EVENT = {"alerts": "click_appstore", "esim": "click_esim", "power": "click_power", "insurance": "click_insurance", "manual": "click_manual"}
 
 
 def esc(s):
@@ -50,7 +50,7 @@ def render_cards():
         parts = [f'<section class="card" id="card-{esc(card["id"])}">']
         parts.append('<div class="card-head"><div class="num"><b>Essential %02d</b>  %s</div>%s</div>' % (
             shown, esc(card.get("kicker", "")),
-            f'<span class="badge{" free" if own else ""}">{esc(card["badge"])}</span>' if card.get("badge") else ""))
+            f'<span class="badge{" free" if "free" in card["badge"].lower() else ""}">{esc(card["badge"])}</span>' if card.get("badge") else ""))
         parts.append(f'<h2>{esc(card.get("title", ""))}</h2>')
         if card.get("why"):
             parts.append(f'<p class="why">{esc(card["why"])}</p>')
