@@ -14,7 +14,7 @@
   "appStore": {
     "url": "https://apps.apple.com/app/japan-disaster-guide/id6787623258",
     "campaign": {
-      "pt": "",
+      "pt": "129017842",
       "ct": "safety_kit",
       "mt": "8",
       "_note": "pt = App Store Connect provider token (App Analytics > Campaigns). Leave empty to use the plain URL."
