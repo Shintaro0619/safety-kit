@@ -15,7 +15,7 @@ ROOT = Path(__file__).parent
 CFG = json.loads((ROOT / "kit.config.json").read_text(encoding="utf-8"))
 INDEX = ROOT / "index.html"
 
-EVENT = {"alerts": "click_appstore", "esim": "click_esim", "power": "click_power", "insurance": "click_insurance", "manual": "click_manual"}
+EVENT = {"alerts": "click_appstore", "esim": "click_esim", "power": "click_power", "insurance": "click_insurance", "luggage": "click_luggage", "manual": "click_manual"}
 
 
 def esc(s):

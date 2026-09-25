@@ -54,6 +54,7 @@ landing URL):
 | `click_esim` | Any eSIM vendor button (`vendor` = option id) |
 | `click_power` | Any power bank vendor button (`vendor` = option id) |
 | `click_insurance` | Any insurance vendor button (`vendor` = option id) |
+| `click_luggage` | Luggage storage button (`vendor` = option id) |
 | `click_coffee` | Buy Me a Coffee button |
 | `click_other` | Footer links (`target` = link id) |
 

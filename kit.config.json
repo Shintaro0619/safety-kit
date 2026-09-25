@@ -210,6 +210,33 @@
       "_source": "https://www.japan.travel/en/plan/travel-insurance-in-japan/ (read 2026-09-09): 'treatment can be expensive', 'strongly recommended that all travelers to Japan get travel insurance', 'possible to purchase insurance after you have arrived'. The earlier line about national health insurance was removed on 2026-09-09: no primary source on hand."
     },
     {
+      "id": "luggage",
+      "kicker": "When plans change",
+      "title": "Somewhere to leave your bags",
+      "badge": "Partner link",
+      "kind": "affiliate",
+      "why": "A typhoon or an earthquake can stop trains and ground flights, and you may still have to check out of your hotel. Storage booked by the day lets you wait, eat and look for information without dragging a suitcase.",
+      "facts": [],
+      "options": [
+        {
+          "id": "bounce",
+          "enabled": true,
+          "name": "Bounce",
+          "cta": "Find luggage storage",
+          "url": "https://go.bounce.com/JAPANDISASTER0681291",
+          "facts": [
+            "Bags are left at local shops and hotels, booked online or in the Bounce app",
+            "Locations in Tokyo, Osaka and Kyoto, including near major stations, per Bounce",
+            "Free cancellation if your plans change, per Bounce",
+            "Each booking includes ¥1,000,000 bag protection, per Bounce. Check the terms before you book"
+          ],
+          "_source": "https://bounce.com/luggage-storage/tokyo , /osaka , /kyoto (read 2026-09-25): local shops and hotels, book online or in the app, free cancellation, ¥1,000,000 protection per booking. Prices and location counts not shown on purpose; they change.",
+          "_program": "Direct (partner.bounce.com). Registered 2026-09-25. Link go.bounce.com/JAPANDISASTER0681291 redirects to bounce.com/s?ref=JAPANDISASTER0681291. Public affiliate page says 10% commission; rate asked to support in writing 2026-09-25, pending. Payout via Stripe (not set up yet)."
+        }
+      ],
+      "indexTitle": "Luggage storage"
+    },
+    {
       "id": "manual",
       "kicker": "Know what to do",
       "title": "Japan Travel Safety Manual",
