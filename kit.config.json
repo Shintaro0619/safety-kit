@@ -180,13 +180,14 @@
     {
       "id": "insurance",
       "kicker": "Travel insurance",
-      "title": "Cover the trip that changes",
+      "title": "Cover medical costs in Japan",
       "badge": "Partner link",
       "kind": "affiliate",
-      "why": "A typhoon can ground flights for a day. An earthquake can close a rail line. Medical care in Japan is advanced, and treatment can be expensive for visitors. Insurance is the part of the kit that pays when plans change.",
+      "why": "Medical care in Japan is advanced, and treatment can be expensive for visitors. Japan's tourism organization recommends travel insurance for all visitors.",
       "facts": [
         "Read what is covered and the limits before you buy. Cover differs by plan and by your home country",
-        "Japan's tourism organization recommends travel insurance for all visitors, and notes it can be bought after arrival (JNTO)"
+        "How a policy treats natural disasters such as earthquakes and typhoons differs by insurer. Check the policy wording on this before you buy",
+        "Insurance can be bought after arrival in Japan, per JNTO"
       ],
       "options": [
         {
@@ -207,7 +208,8 @@
         }
       ],
       "indexTitle": "Travel insurance",
-      "_source": "https://www.japan.travel/en/plan/travel-insurance-in-japan/ (read 2026-09-09): 'treatment can be expensive', 'strongly recommended that all travelers to Japan get travel insurance', 'possible to purchase insurance after you have arrived'. The earlier line about national health insurance was removed on 2026-09-09: no primary source on hand."
+      "_source": "https://www.japan.travel/en/plan/travel-insurance-in-japan/ (read 2026-09-09): 'treatment can be expensive', 'strongly recommended that all travelers to Japan get travel insurance', 'possible to purchase insurance after you have arrived'. The earlier line about national health insurance was removed on 2026-09-09: no primary source on hand.",
+      "_note_2026-09-25": "Removed the typhoon/earthquake lead ('Insurance is the part of the kit that pays when plans change'): it implied disaster disruption is covered. Heymondo (2026-09-25) noted natural disasters fall under specific exclusions standard to travel insurance."
     },
     {
       "id": "luggage",
