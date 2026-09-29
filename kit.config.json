@@ -239,6 +239,34 @@
       "indexTitle": "Luggage storage"
     },
     {
+      "id": "stay",
+      "kicker": "Stuck for the night",
+      "title": "Rebook tonight's room",
+      "badge": "Partner link",
+      "kind": "affiliate",
+      "why": "A typhoon or an earthquake can cancel flights and stop trains, and you may need a room for one more night near where you are.",
+      "facts": [
+        "Before you move, check whether the trains you need are running. Rail operators publish service status on their own sites",
+        "Read each room's cancellation terms before you book. They differ by hotel and by rate"
+      ],
+      "options": [
+        {
+          "id": "tripcom",
+          "enabled": true,
+          "name": "Trip.com",
+          "cta": "Find a hotel",
+          "url": "https://www.trip.com/t/H3vnlc36YW2",
+          "facts": [
+            "Hotel search and booking in English, with prices shown in the currency you choose",
+            "Also sells flights, if you need a new one after a cancellation"
+          ],
+          "_source": "trip.com (checked 2026-09-29): hotels and flights sold on the same platform; currency selector on site. No prices on purpose.",
+          "_program": "Direct (Trip.com Affiliate, Influencer). AID 10778881, SID 332460493, trip_sub1=kit_stay. Approved 2026-09-28. Up to 7%, cookie 30 days web / 7 days app, payout min $200 (USD). Trial card: judge after 60 days (clicks + bookings)."
+        }
+      ],
+      "indexTitle": "Hotel rebooking"
+    },
+    {
       "id": "manual",
       "kicker": "Know what to do",
       "title": "Japan Travel Safety Manual",
