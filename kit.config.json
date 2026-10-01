@@ -101,7 +101,7 @@
         },
         {
           "id": "mobal",
-          "enabled": true,
+          "enabled": false,
           "name": "Mobal Japan Tourist eSIM",
           "cta": "See the Japan tourist eSIM",
           "url": "https://www.mobal.com/esim-japan-travel/?a_aid=japandisasterguide&a_bid=552f4ac9",
@@ -117,7 +117,7 @@
         },
         {
           "id": "sakura",
-          "enabled": false,
+          "enabled": true,
           "name": "Sakura Mobile",
           "cta": "See Japan eSIM plans",
           "url": "https://www.sakuramobile.jp/japandisasterguide-top",
@@ -125,10 +125,10 @@
             "Japan-based provider; unlimited-data prepaid eSIM for stays of up to 90 days",
             "Delivered by email as a QR code; can be installed before departure, and the usage period starts when you arrive in Japan (5G eSIM)",
             "Hotspot / tethering supported, per Sakura Mobile",
-            "If the eSIM turns out to be incompatible with your phone, Sakura Mobile upgrades you to a Pocket WiFi at no extra cost, per their page"
+            "If the eSIM turns out to be incompatible with your phone, Sakura Mobile offers an option to switch to a Pocket WiFi device, per their page"
           ],
-          "_source": "https://www.sakuramobile.jp/travel/esim/ (read 2026-09-04). Prices not shown on purpose.",
-          "_program": "Direct (p.sakuramobile.jp, iDevAffiliate). Approved 2026-09-07 09:02; link received 09:04 by email (resolves to sakuramobile.jp/?idev_id=625&link=10). Use ONLY this emailed link, not the dashboard links (their instruction). Travel SIM/WiFi 10%, cookie 30 days, PayPal. Kept as the Japan-slot backup while Mobal is shown; swap in if Mobal has no conversions."
+          "_source": "https://www.sakuramobile.jp/travel/esim/ (read 2026-09-04, re-read 2026-10-01). Prices not shown on purpose.",
+          "_program": "Direct (p.sakuramobile.jp, iDevAffiliate). Approved 2026-09-07 09:02; link received 09:04 by email (resolves to sakuramobile.jp/?idev_id=625&link=10). Use ONLY this emailed link, not the dashboard links (their instruction). Travel SIM/WiFi 10%, cookie 30 days, PayPal. Shown from 2026-10-01 in place of Mobal (Mobal: 6 clicks, 0 sales in 30 days). Sakura asked to see affiliate results before considering paid tie-ups."
         }
       ],
       "_display_rule": "Show at most 2 vendors: one global brand (Airalo or Saily) + one Japan specialist (Mobal or Sakura Mobile). Others stay enabled:false as backups.",
