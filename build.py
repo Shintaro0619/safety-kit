@@ -75,6 +75,29 @@ def render_cards():
     return "\n".join(out)
 
 
+def render_start():
+    s = CFG.get("start") or {}
+    if not s.get("enabled") or not s.get("items"):
+        return ""
+    parts = ['<section class="start" id="start" aria-labelledby="start-title">']
+    parts.append(f'<p class="label">{esc(s.get("label", ""))}</p>')
+    parts.append(f'<h2 id="start-title">{esc(s.get("title", ""))}</h2><ol>')
+    for i, it in enumerate(s["items"], 1):
+        parts.append(f'<li><a href="{esc(it["href"])}" data-event="click_start" data-vendor="{esc(it["id"])}">'
+                     f'<b>{i}</b><span>{esc(it["text"])}</span></a></li>')
+    parts.append("</ol>")
+    m = s.get("more") or {}
+    if m.get("text"):
+        parts.append(f'<p class="more">{esc(m["text"])} <a href="{esc(m["href"])}" data-event="click_start" '
+                     f'data-vendor="manual">{esc(m.get("cta", ""))}</a></p>')
+    w = s.get("watch") or {}
+    if w.get("text"):
+        parts.append(f'<p class="more">{esc(w["text"])}: <a href="{esc(CFG["site"]["instagram"])}" target="_blank" '
+                     f'rel="noopener" data-event="click_start" data-vendor="instagram">{esc(w.get("cta", ""))}</a></p>')
+    parts.append("</section>")
+    return "".join(parts)
+
+
 def render_jsonld():
     site = CFG["site"]["url"]
     app = {
@@ -114,6 +137,7 @@ def fill(text, marker, body):
 
 def main():
     text = INDEX.read_text(encoding="utf-8")
+    text = fill(text, "start", render_start())
     text = fill(text, "cards", render_cards())
     text = fill(text, "jsonld", render_jsonld())
     INDEX.write_text(text, encoding="utf-8")

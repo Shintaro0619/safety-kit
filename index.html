@@ -95,6 +95,16 @@
   .btn.ghost { background: transparent; border-color: var(--line); color: var(--text); font-weight: 500; }
   .btn svg { width: 18px; height: 18px; flex: none; }
 
+  /* start here */
+  .start { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px var(--pad); margin: 8px 0 16px; }
+  .start .label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-2); font-weight: 700; margin: 0 0 4px; }
+  .start h2 { font-size: 20px; line-height: 1.25; margin: 0 0 12px; }
+  .start ol { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; }
+  .start ol a { display: flex; align-items: flex-start; gap: 12px; padding: 10px 12px; border-radius: 10px; background: var(--bg-3); color: var(--text); text-decoration: none; font-size: 15px; line-height: 1.4; -webkit-tap-highlight-color: transparent; }
+  .start ol a b { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; background: var(--accent); color: #fff; margin-top: 1px; }
+  .start .more { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+  .start .more a { color: var(--accent-2); font-weight: 600; }
+
   /* cards */
   .card {
     background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
@@ -149,6 +159,10 @@
       <p class="note" style="text-align:center">Free on the App Store</p>
     </div>
   </header>
+
+  <!-- prerender:start -->
+<section class="start" id="start" aria-labelledby="start-title"><p class="label">Start here</p><h2 id="start-title">Your checklist before you fly</h2><ol><li><a href="#card-alerts" data-event="click_start" data-vendor="alerts"><b>1</b><span>Install the alerts app and save your destinations. Warnings reach you in your language.</span></a></li><li><a href="#card-esim" data-event="click_start" data-vendor="esim"><b>2</b><span>Install a travel eSIM at home. Check that your phone is compatible first.</span></a></li><li><a href="#card-insurance" data-event="click_start" data-vendor="insurance"><b>3</b><span>Buy travel insurance and save the policy number in your phone.</span></a></li><li><a href="guide/emergency-numbers-japan/" data-event="click_start" data-vendor="numbers"><b>4</b><span>Save 119 (fire and ambulance) and 110 (police).</span></a></li><li><a href="guide/reach-family-after-disaster/" data-event="click_start" data-vendor="family"><b>5</b><span>Agree one message plan with your family: Dial 171 and the free Wi-Fi 00000JAPAN.</span></a></li></ol><p class="more">The full day-bag checklist, a ten-minute check for your hotel room on the first night, and a contact sheet to fill in are in the Japan Travel Safety Manual. <a href="#card-manual" data-event="click_start" data-vendor="manual">See the manual</a></p><p class="more">Short how-to videos on Instagram: <a href="https://www.instagram.com/japandisasterchannel/" target="_blank" rel="noopener" data-event="click_start" data-vendor="instagram">@japandisasterchannel</a></p></section>
+<!-- /prerender:start -->
 
   <noscript><p>This page needs JavaScript to show the links. The app is on the App Store at apps.apple.com/app/id6787623258.</p></noscript>
 

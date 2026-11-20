@@ -31,6 +31,48 @@
     "indexLabel": "What's in the kit",
     "_note": "showAppButton=false since 2026-09-07: the hero App Store button duplicated bio link 1 and 41% of visitors left through it before seeing the other cards. The app button stays inside card 01. Set true to restore."
   },
+  "start": {
+    "enabled": true,
+    "_note": "Five-item checklist under the hero (added 2026-11-20). Wording matches the sold manual v1.0: ch02 quick card (app, eSIM, insurance), ch09 (119/110), ch11 (171, 00000JAPAN). Full lists stay in the manual (decision 2026-09-09).",
+    "label": "Start here",
+    "title": "Your checklist before you fly",
+    "items": [
+      {
+        "id": "alerts",
+        "text": "Install the alerts app and save your destinations. Warnings reach you in your language.",
+        "href": "#card-alerts"
+      },
+      {
+        "id": "esim",
+        "text": "Install a travel eSIM at home. Check that your phone is compatible first.",
+        "href": "#card-esim"
+      },
+      {
+        "id": "insurance",
+        "text": "Buy travel insurance and save the policy number in your phone.",
+        "href": "#card-insurance"
+      },
+      {
+        "id": "numbers",
+        "text": "Save 119 (fire and ambulance) and 110 (police).",
+        "href": "guide/emergency-numbers-japan/"
+      },
+      {
+        "id": "family",
+        "text": "Agree one message plan with your family: Dial 171 and the free Wi-Fi 00000JAPAN.",
+        "href": "guide/reach-family-after-disaster/"
+      }
+    ],
+    "more": {
+      "text": "The full day-bag checklist, a ten-minute check for your hotel room on the first night, and a contact sheet to fill in are in the Japan Travel Safety Manual.",
+      "cta": "See the manual",
+      "href": "#card-manual"
+    },
+    "watch": {
+      "text": "Short how-to videos on Instagram",
+      "cta": "@japandisasterchannel"
+    }
+  },
   "cards": [
     {
       "id": "alerts",
