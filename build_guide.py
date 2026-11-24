@@ -13,9 +13,17 @@ import html
 import json
 from pathlib import Path
 
+from market_theme import NAV_CSS, nav_html
+from shop_pages import SHOP, TIPS
+from shop_products import PRODUCTS
+
+TIP_CSS = (".grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;margin:0 0 8px}.tip{text-decoration:none;color:var(--text)}"
+           ".tip img{width:100%;height:auto;aspect-ratio:1/1;border-radius:12px;display:block;object-fit:cover}.tip h3{font-size:15px;line-height:1.3;margin:8px 0 2px}.tip .sub{font-size:12px;color:var(--muted);margin:0}")
+
 ROOT = Path(__file__).parent
 OUT = ROOT / "guide"
 SITE = "https://shintaro0619.github.io/safety-kit/"
+SITE = __import__("os").environ.get("PREVIEW_SITE", SITE)  # local preview only; publish builds must not set it
 CFG = json.loads((ROOT / "kit.config.json").read_text(encoding="utf-8"))
 APP = CFG["appStore"]["url"]
 UMAMI = CFG["analytics"]["websiteId"]
@@ -270,7 +278,8 @@ TEMPLATE = """<!doctype html>
 </head>
 <body>
 <div class="wrap">
-<div class="top"><img src="{site}assets/jdg-logo-64.png" alt="" width="26" height="26"><a href="{site}">Japan Travel Safety Kit</a> · <a href="{site}guide/">Guides</a></div>
+<div class="top"><img src="{site}assets/jdg-logo-64.png" alt="" width="26" height="26"><a href="{site}">Japan Disaster Guide</a></div>
+{nav}
 <h1>{title}</h1>
 <p class="answer">{answer}</p>
 <div class="tablewrap">{body}</div>
@@ -279,9 +288,6 @@ TEMPLATE = """<!doctype html>
 <h2>The live warnings, in your language</h2>
 <p>Japan Disaster Guide is a free iPhone app that delivers JMA warnings for the places you save, after JMA confirms them, in 7 languages, with 115,000+ evacuation sites on a map.</p>
 <a class="btn" href="{app}" data-event="click_appstore" data-vendor="guide-{slug}" rel="noopener">Free on the App Store</a>
-<a class="btn secondary" href="{site}" data-event="click_index" data-vendor="guide-{slug}">See the Japan Travel Safety Kit</a>
-<p style="margin-top:10px">The full procedures, the 119 script, shelter life, the 171 steps, 21 pointing cards and the worksheets are in the <b>Japan Travel Safety Manual</b>, a 66-page PDF made to read on a phone.</p>
-<a class="btn secondary" href="https://soyama6.gumroad.com/l/japan-travel-safety-manual" data-event="click_manual" data-vendor="guide-{slug}" rel="noopener">Get the manual ($9.99 PDF)</a>
 </div>
 <div class="sources"><b>Sources</b> (read {today}; quotations are verbatim)<ol>{sources}</ol>
 <p>Japan Disaster Guide is an independent app. It is not affiliated with the Japan Meteorological Agency or any government body. In an emergency, follow the instructions of local officials.</p></div>
@@ -318,15 +324,18 @@ INDEX_TEMPLATE = """<!doctype html>
 </head>
 <body>
 <div class="wrap">
-<div class="top"><img src="{site}assets/jdg-logo-64.png" alt="" width="26" height="26"><a href="{site}">Japan Travel Safety Kit</a></div>
-<h1>Japan's disaster warnings, explained for travelers</h1>
-<p class="answer">Each page answers one question with the official definition, quoted as written from the Japanese source, and the one rule that follows from it.</p>
+<div class="top"><img src="{site}assets/jdg-logo-64.png" alt="" width="26" height="26"><a href="{site}">Japan Disaster Guide</a></div>
+{nav}
+<h1>Guides</h1>
+<p class="answer">How-tos and Japan's warnings explained, each with the official Japanese source. Not current alerts.</p>
+<h2>Disaster Tips, from our reels</h2>
+<div class="grid">{tips}</div>
+<h2>Japan's warnings, explained</h2>
 <div class="more"><ul>{list}</ul></div>
 <div class="cta">
 <h2>The live warnings, in your language</h2>
 <p>Japan Disaster Guide is a free iPhone app that delivers JMA warnings for the places you save, after JMA confirms them, in 7 languages.</p>
 <a class="btn" href="{app}" data-event="click_appstore" data-vendor="guide-index" rel="noopener">Free on the App Store</a>
-<a class="btn secondary" href="{site}" data-event="click_index" data-vendor="guide-index">See the Japan Travel Safety Kit</a>
 </div>
 <footer><a href="{site}">Japan Travel Safety Kit</a> · <a href="https://www.instagram.com/japandisasterchannel/" rel="noopener">@japandisasterchannel</a> · <a href="https://shintaro0619.github.io/jdg-web/privacy.html" rel="noopener">Privacy</a></footer>
 </div>
@@ -380,9 +389,9 @@ def main():
         more = "".join(f'<li><a href="{SITE}guide/{p["slug"]}/">{html.escape(p["title"])}</a></li>' for p in PAGES if p is not page)
         sources = "".join(f'<li>{html.escape(n)}. <a href="{u}" rel="noopener">{html.escape(u)}</a></li>' for n, u in page["sources"])
         note = f'<p style="color:var(--muted);font-size:13px">{html.escape(page["note"])}</p>' if page.get("note") else ""
-        out = TEMPLATE.format(
+        out = TEMPLATE.format(nav=nav_html(SITE, "guides"),
             title=html.escape(page["title"]), description=html.escape(page["description"]), url=url, site=SITE,
-            jsonld=jsonld_for(page, url), umami=umami_tag(), css=CSS, answer=html.escape(page["answer"]),
+            jsonld=jsonld_for(page, url), umami=umami_tag(), css=CSS + NAV_CSS, answer=html.escape(page["answer"]),
             body=page["body"], note=note, app=APP, slug=page["slug"], sources=sources, more=more, today=TODAY)
         d = OUT / page["slug"]
         d.mkdir(exist_ok=True)
@@ -391,9 +400,17 @@ def main():
     idx_ld = json.dumps({"@context": "https://schema.org", "@type": "CollectionPage", "name": "Japan's disaster warnings, explained for travelers",
                          "url": SITE + "guide/", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "Japan Disaster Guide", "url": SITE},
                          "hasPart": [{"@type": "Article", "headline": p["title"], "url": f"{SITE}guide/{p['slug']}/"} for p in PAGES]}, ensure_ascii=False)
-    (OUT / "index.html").write_text(INDEX_TEMPLATE.format(site=SITE, jsonld=idx_ld, umami=umami_tag(), css=CSS, list=lst, app=APP), encoding="utf-8")
+    tips = "".join(
+        f'<a class="tip" href="{SITE}tips/{t["slug"]}/"><img src="{SITE}assets/tips/{t["slug"]}.jpg" alt="" width="240" height="240" loading="lazy">'
+        f'<h3>{html.escape(t["short"])}</h3><p class="sub">Disaster Tips, Part {t["part"]}</p></a>'
+        for t in sorted(TIPS, key=lambda t: t["posted"], reverse=True))
+    (OUT / "index.html").write_text(INDEX_TEMPLATE.format(site=SITE, jsonld=idx_ld, umami=umami_tag(), css=CSS + NAV_CSS + TIP_CSS, list=lst, app=APP,
+                                                          nav=nav_html(SITE, "guides"), tips=tips), encoding="utf-8")
     # sitemap
     items = [(SITE, "1.0"), (SITE + "guide/", "0.8")] + [(u, "0.8") for u in urls]
+    items += [(f"{SITE}tips/{t['slug']}/", "0.7") for t in TIPS]
+    items += [(SITE + "shop/", "0.7")] + [(f"{SITE}shop/{x['slug']}/", "0.6") for x in SHOP]
+    items += [(f"{SITE}shop/item/{k}/", "0.5") for k in PRODUCTS]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, pr in items:
         sm.append(f"  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>{pr}</priority></url>")

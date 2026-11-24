@@ -137,6 +137,7 @@
   footer a { color: var(--muted); }
   .hidden { display: none !important; }
   noscript p { background: var(--bg-3); padding: 12px; border-radius: 10px; }
+  .nav{display:flex;width:fit-content;max-width:100%;overflow-x:auto;gap:4px;padding:4px;margin:0 0 16px;background:var(--bg-2);border:1px solid var(--line);border-radius:999px}.nav a{color:var(--muted);text-decoration:none;white-space:nowrap;font-size:15px;font-weight:700;padding:8px 16px;border-radius:999px}.nav a.on{background:var(--text);color:#0F1420}
 </style>
 </head>
 <body>
@@ -144,6 +145,7 @@
 
   <header class="hero">
     <div class="brand"><img src="assets/jdg-logo-64.png" alt="" width="28" height="28"><span id="eyebrow">By Japan Disaster Guide</span></div>
+    <nav class="nav" style="margin:14px 0 0"><a href="./" class="on">Before you fly</a><a href="guide/" data-event="click_other" data-vendor="nav-guides">Guides</a><a href="shop/" data-event="click_other" data-vendor="nav-gear">Gear</a></nav>
     <h1>Japan Travel <span>Safety Kit</span></h1>
     <p class="sub" id="subtitle">Everything you need for a safer trip to Japan.</p>
     <p class="intro" id="intro"></p>
@@ -178,6 +180,8 @@
   <section class="section" id="disclosure">
     <h2>Affiliate disclosure</h2>
     <p id="disclosure-text"></p>
+    <p lang="ja">Amazonのアソシエイトとして、Japan Disaster Guideは適格販売により収入を得ています。</p>
+    <p>As an Amazon Associate, Japan Disaster Guide earns from qualifying purchases.</p>
   </section>
 
   <section class="support" id="support">
@@ -194,6 +198,8 @@
     <p id="footer-analytics"></p>
     <p>
       <a id="link-guides" href="guide/" data-event="click_other" data-vendor="guides">Guides: Japan's warnings explained</a>
+      &nbsp;·&nbsp;
+      <a id="link-gear" href="shop/" data-event="click_other" data-vendor="gear">Gear</a>
       &nbsp;·&nbsp;
       <a id="link-instagram" href="https://www.instagram.com/japandisasterchannel/" data-event="click_other" data-vendor="instagram" rel="noopener" target="_blank">@japandisasterchannel</a>
       &nbsp;·&nbsp;
